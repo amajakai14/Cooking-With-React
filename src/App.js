@@ -6,7 +6,7 @@ export const ThemeContext = React.createContext()
 
 function App() {
   console.log("Render App")
-  const [theme,setTheme] = useState('red')
+  const [theme,setTheme] = useState('green')
   return (
     <ThemeContext.Provider value={{backgroundColor:theme}}>
       Counter
@@ -14,7 +14,7 @@ function App() {
       CounterHooks
       <CounterHooks initialCount={3}/>
       <button onClick={()=> setTheme(prevTheme => {
-        return prevTheme === "red"? "blue":"red"
+        return prevTheme === "green"? "blue":"green"
         })}>Toggle Theme</button>
     </ThemeContext.Provider>
   )
